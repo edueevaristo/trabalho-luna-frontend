@@ -1,0 +1,149 @@
+:root {
+    --main-color: #0071BB;
+    --secondary-color: #FFFFFF;
+    --title-titulo-aberto: #2DCE89;
+    --title-titulo-em-andamento: #FB6340;
+    --title-titulo-aguarda-resposta: #C4AC35;
+    --title-titulo-aguarda-resposta-aluno: #773ABF;
+    --card-hover: #CACACA;
+}
+
+.bg-primary {
+    background-color: var(--main-color) !important;
+}
+
+.active {
+    background-color: var(--main-color) !important;
+    color: var(--secondary-color) !important;
+}
+
+.card-chamados {
+    border-radius: 10px !important;
+}
+
+.notsel {
+    overflow-y: auto !important;
+    height: calc(100vh - 178px) !important;
+}
+
+.kanban-legend {
+    border-bottom: 4px solid !important;
+    margin-bottom: 0px !important;
+    overflow: hidden !important;
+    height: 40px !important;
+}
+
+.kanban-item-titulo {
+    font-weight: bold !important;
+    font-size: 16px !important;
+    margin-left: 8px;
+}
+
+.ordenacao-kanban {
+    width: 40% !important;
+    line-height: 22px !important;
+    margin: 0px !important;
+    text-align: right !important;
+}
+
+.ordenacao {
+    width: 60% !important;
+    border: transparent !important;
+}
+
+.div_kanban_usuario {
+    overflow-y: auto !important;
+    height: calc(100vh - 178px) !important;
+    margin-top: 18px !important;
+}
+
+.notsel-tipos-chamado {
+    width: calc(20% - 20px) !important;
+    margin-right: 10px !important;
+    margin-left: 10px !important;
+}
+
+.titulo-aberto {
+    border-bottom: 4px solid var(--title-titulo-aberto) !important;
+    color: #2dce89 !important;
+    font-weight: bold !important;
+    font-size: 16px !important;
+}
+
+.titulo-em-andamento {
+    border-bottom: 4px solid var(--title-titulo-em-andamento) !important;
+    color: var(--title-titulo-em-andamento) !important;
+    font-weight: bold !important;
+    font-size: 16px !important;
+}
+
+.titulo-aguarda-resposta {
+    border-bottom: 4px solid var(--title-titulo-aguarda-resposta) !important;
+    color: var(--title-titulo-aguarda-resposta) !important;
+    font-weight: bold;
+    font-size: 16px !important;
+}
+
+.titulo-aguarda-resposta-aluno {
+    border-bottom: 4px solid var(--title-titulo-aguarda-resposta-aluno) !important;
+    color: var(--title-titulo-aguarda-resposta-aluno) !important;
+    font-weight: bold !important;
+    font-size: 16px !important;
+}
+
+.titulo-fechados-suporte {
+    border-bottom: 4px solid #5e72e4 !important;
+    color: #5e72e4 !important;
+    font-weight: bold !important;
+    font-size: 16px !important;
+}
+
+.kanban-item {
+    max-width: 100% !important;
+    padding: 2px !important;
+    margin-top: 0px !important;
+    margin-bottom: 9px !important;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
+    border-radius: 4px !important;
+}
+
+.kanban-item:hover {
+    background-color: var(--card-hover) !important;
+    transition: 0.5s ease-in-out !important;
+}
+
+.kanban-container {
+    background-color: transparent !important;
+    width: 100% !important;
+}
+
+.kanban-board {
+    background-color: transparent !important;
+    padding: 0 !important;
+    margin-left: 0 !important;
+}
+
+.kanban-drag {
+    background-color: transparent !important;
+    padding: 0 !important;
+    margin-left: 0 !important;
+}
+
+::-webkit-scrollbar {
+    width: 0px !important;
+}
+
+.sidenav {
+    width: 250px !important;
+    transition: 0.5 ease-in-out !important;
+}
+
+.card-dashboard-status {
+    border: 1px solid var(--main-color) !important;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
+}
+
+.chamados-dashboard {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
+    margin-bottom: 12px;
+}
