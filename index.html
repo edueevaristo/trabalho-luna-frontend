@@ -32,13 +32,13 @@
         <div class="collapse navbar-collapse" id="sidenav-collapse-main">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="abrirchamado.html">
+              <a class="nav-link" data-toggle="modal" data-target="#idModalCadastroChamados" style="cursor: pointer;">
                 <i class="ni ni-tv-2 text-primary icons"></i>
                 <span class="nav-link-text">Abrir Chamado</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="abrirchamado.html">
+              <a class="nav-link active">
                 <i class="fas fa-home text-primary icons"></i>
                 <span class="nav-link-text">Dashboard</span>
               </a>
@@ -49,12 +49,6 @@
                 <span class="nav-link-text">Kanban</span>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="map.html">
-                <i class="ni ni-pin-3 text-primary icons"></i>
-                <span class="nav-link-text">Chat</span>
-              </a>
-            </li>
           </ul>
         </div>
       </div>
@@ -62,7 +56,6 @@
   </nav>
   <!-- Main content -->
   <div class="main-content" id="panel">
-
     <!-- Topnav -->
     <nav class="navbar navbar-top navbar-expand navbar-dark bg-primary border-bottom">
       <div class="container-fluid">
@@ -172,14 +165,14 @@
                 </ol>
               </nav>
             </div>
-            <div class="col-lg-6 col-5 text-right">
+            <!-- <div class="col-lg-6 col-5 text-right">
               <a href="#" class="btn btn-lg btn-neutral">Criar Novo Ticket</a>
-            </div>
+            </div> -->
           </div>
           <!-- Card stats -->
           <div class="row">
             <div class="col-xl-4 col-md-6">
-              <div class="card card-stats">
+              <div class="card card-stats-1">
                 <!-- Card body -->
                 <div class="card-body">
                   <div class="row">
@@ -202,7 +195,7 @@
               </div>
             </div>
             <div class="col-xl-4 col-md-6">
-              <div class="card card-stats">
+              <div class="card card-stats-1">
                 <!-- Card body -->
                 <div class="card-body">
                   <div class="row">
@@ -225,7 +218,7 @@
               </div>
             </div>
             <div class="col-xl-4 col-md-6">
-              <div class="card card-stats">
+              <div class="card card-stats-1">
                 <!-- Card body -->
                 <div class="card-body">
                   <div class="row">
@@ -476,7 +469,7 @@
               </div>
             </div>
             <div class="card-body">
-              <div class="card-styles"> 
+              <div class="card-styles">
                 <div class="card card-stats card-dashboard-status">
                   <div class="card-body">
                     <div class="row">
@@ -563,11 +556,69 @@
     </div>
   </div>
 
-  <script src="node_modules/jquery-ui/dist/jquery-ui.min.js"></script>
-  <script src="node_modules/jquery/dist/jquery.min.js"></script>
-  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-  <script src="node_modules/@fortawesome/fontawesome-free/js/fontawesome.min.js"></script>
-  <script src="node_modules/sweetalert2/dist/sweetalert2.min.js"></script>
+  <!-- INICIO DE MODAL DE CADASTRO DOS CHAMADOS -->
+  <div class="modal fade" id="idModalCadastroChamados" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel" style="color: #0071BB;">Unimar - Criar novo Ticket</h5>
+
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h2 class="text-black">#00006 - Título do chamado</h2>
+          <form id="formCadastrarChamado" name="formCadastrarChamado" action="POST">
+            <div class="form-group">
+              <label for="txtDescricao" class="col-form-label">Descrição: </label>
+              <textarea class="form-control" id="txtDescricao" name="txtDescricao"></textarea>
+            </div>
+            <div class="col-lg-12">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label for="txtNome" class="col-form-label">Nome:</label>
+                    <input type="text" class="form-control" id="txtNome" name="txtNome">
+                  </div>
+                </div>
+                <div class="col-lg-2">
+                  <div class="form-group">
+                    <label for="txtRA" class="col-form-label">RA:</label>
+                    <input type="text" class="form-control" id="txtRA" name="txtRA">
+                  </div>
+                </div>
+                <div class="col-lg-2">
+                  <div class="form-group">
+                    <label for="txtCurso" class="col-form-label">Curso:</label>
+                    <input type="text" class="form-control" id="txtCurso" name="txtCurso">
+                  </div>
+                </div>
+                <div class="col-lg-2">
+                  <div class="form-group">
+                    <label for="txtSala" class="col-form-label">Sala:</label>
+                    <input type="text" class="form-control" id="txtSala" name="txtSala">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+          <button type="button" class="btn btn-primary">Enviar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- FIM DE MODAL DE CADASTRO DOS CHAMADOS -->
+
+  <script src="./node_modules/jquery-ui/dist/jquery-ui.min.js"></script>
+  <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  <script src="./node_modules/@fortawesome/fontawesome-free/js/fontawesome.min.js"></script>
+  <script src="./node_modules/sweetalert2/dist/sweetalert2.min.js"></script>
   <script
     src="./node_modules/@creative-tim-official/argon-dashboard-free/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
   <script
